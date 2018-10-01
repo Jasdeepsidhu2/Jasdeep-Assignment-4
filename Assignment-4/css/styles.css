@@ -1,0 +1,719 @@
+/* **************************Home page***************************************** */
+
+/* ******************************General Section *******************************/
+
+
+
+li{
+    list-style: none;
+}
+a{
+     text-decoration: none;
+     color: white;
+     font-family: 'Prompt', sans-serif;
+}
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1700px;
+    /* background: blue; */
+}
+* {
+    box-sizing: border-box;
+}
+h1  {
+    font-family: 'Prompt', sans-serif;
+    font-size: 70px;
+    margin: 0px;
+}
+p{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
+    margin: 0px;
+
+}
+h2,h3,h4
+{
+    font-family: 'Prompt', sans-serif;
+    margin: 0px;
+}
+/* Two blue buttons */
+.b1 ,.b2 {
+    /* border: 2px solid white; */
+    border-radius: 30px;
+    padding: 5px 25px ;
+    background: #6bf;
+    margin:30px 0 0 10px;
+    width: 150px;
+}
+.desktop-menu{
+    display: block;
+
+}
+.mobile-menu{
+    display: block;
+}
+/* ******************************Header Section *******************************/
+
+
+ header{
+    background:black;
+    width:100%;
+    position: fixed;
+    z-index: 1000;
+}
+.head{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 700px;
+}
+.logo {
+    color: white;
+    padding: 10px;
+      
+} 
+.menu ul
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu ul a{
+    padding: 10px 0px;
+    display: flex;
+    margin-right: 20px;
+  
+
+        
+}
+.menu ul a:hover{
+    color: grey;
+
+}
+ 
+.search{
+    max-width:120px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 120px;
+}
+.hamburger-button{
+
+    display: none;
+    border: none;
+    color: white;
+    background: transparent;
+   
+
+}
+.mobile-container{
+    width: 400px;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+    /* bottom: 0; */
+    left: 0;
+    transition: 0.2s;
+    transform: translateX(-400px);
+    
+}
+.mobile-container.open {
+    transform: translateX(0px);
+}
+
+.mobile-container li{
+
+margin: 10px;
+padding: 10px;
+border-bottom: 1px solid white;
+
+
+}
+
+
+    @media screen and  (max-width:750px)
+    {
+        
+        .hamburger-button{
+            display: block;
+        }
+        .logo  > i{
+                margin: auto;
+                 
+        }
+        .menu{
+            display: none;
+        }
+        .search-icon{
+
+            display: none;
+       }
+       .search{
+           max-width: 50px;
+       }
+       .mobile-menu{
+           display: block;
+       }
+    }
+
+
+/* ************************Main Page**************** */
+/* ***************Hero Section ********************* */
+
+.hero{
+    
+    height:600px;
+    display: flex;
+    background:black  url('./../images/iphone.jpg') no-repeat ;
+    background-size: contain;
+    background-position:right;
+        
+ }
+.hero-content{
+    color: white;
+    height: 100%;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content:center;
+   
+  
+   padding-left: 100px;
+      
+}
+@media screen and  (max-width:1050px)
+
+{
+    .hero{
+        height: 800px;
+        background: black;
+    }
+    .image{
+        height: 400px;
+        width: 400px;
+        background: url('./../images/iphone.jpg') ;
+        background-size: cover;
+        background-position:center;
+    }
+    .hero-content{
+        margin-left: 30px;
+        margin-right: 30px;
+        padding:50px;
+    }
+}
+
+/* ***************main Section ********************* */
+/* ************Products***************** */
+
+
+
+/* ****one showcase product */
+.show-case{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.product1{
+
+    width: 80%;
+    height: 500px;
+    background:url(./../images/watch1.jpg) ;
+    background-size: cover;
+    background-position: 50% 50%;
+
+}
+.product-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 400px;
+    width: 500px;
+    position: absolute;
+    background: #f7f7f8;
+    bottom: 0;
+    right:  0;
+
+}
+.product-description h3{
+    color: coral;
+}
+@media screen and  (max-width:750px)
+    {
+        .product1{
+            width: 100%;
+        }
+        .product-description{
+    
+            position: relative;
+            width: 90%;
+            height: 300px;
+            margin: -40px auto 10px;
+                    
+        }
+    }
+/* *****More Products******  */
+
+
+.card-container1{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.card-container2{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    
+}
+
+
+.card1{
+    width: 49%;
+    height: 500px;
+    display: flex;
+    background: black url(./../images/music.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;
+    transform: scale(0.98)
+
+
+}
+.card2{
+    width: 49%;
+    height: 500px;
+    display: flex;
+    background:linear-gradient(rgba(0, 0, 0, 0.8),rgba(255, 255, 255,0.2)),url('./../images/ipad6.jpg') no-repeat;  
+    background-size:contain;
+    background-position: bottom;
+    transform: scale(0.98)
+
+}
+
+.card3{
+    width: 49%;
+    height: 500px;
+    display: flex;
+    /*margin-right: 10px;*/
+    background: url(./../images/macbook.jpg) no-repeat;
+    background-size: cover;
+    background-position:50% 100%;
+    transform: scale(0.98)
+ 
+}
+
+.card4{
+    width: 49%;
+    height: 500px;
+    display: flex;
+    background: url(./../images/ipod3.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.98)
+  
+}
+.card-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    height: 300px;
+    width: 90%;
+    padding-top: 20px;
+    color: white;
+
+}
+.card1 .card-description{
+    color: black;
+}
+.card1:hover,.card2:hover,.card3:hover,.card4:hover{
+    transition: 0.2s;
+    transform: scale(1);
+
+
+}
+@media screen and  (max-width:850px)
+    {
+        .card1 , .card2, .card3,.card4{
+            width:100%;
+            margin-bottom: 10px;
+        }
+    }
+
+
+/* ***** Footer Section************ */
+  footer {
+        padding: 100px 0;
+        background: rgb(212, 207, 207);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+        
+    .footer-card {
+        
+        flex: 1;
+        padding: 20px;
+    
+    }
+    .footer-card h4{
+
+    margin: 0 0 0 40px;
+    }
+
+    footer a {
+        color: rgb(99, 96, 96);
+        font-weight: 400;
+        text-transform: uppercase;
+        display: block;
+        padding: 10px 0;
+        font-size: 0.8em;
+    }
+    
+        .social-icons{
+       max-width: 150px;
+        display: flex;
+        justify-content:space-between;
+      
+     }
+     .social-icons li a:hover{
+        transition: 0.2s;
+        transform: scale(1.5);
+
+     }
+
+     .footer-part-2 ul{
+         display: flex;
+      
+     }
+     .footer-part-2 a{
+         padding-top:2px;
+         text-decoration: underline;
+     }
+     @media screen and  (max-width:900px)
+    {
+        .footer-card{
+
+            flex: 50%;
+           
+            
+        }
+
+    }
+  /* *************** Product Page*******************/
+
+    .product{
+        background: #e2e2eb;
+    }
+
+  .product-hero{
+            height: 600px;
+            background: white url('./../images/p-watch5.png') no-repeat;
+            background-size: contain;
+            background-position:bottom;
+            text-align: center;
+            padding: 125px;
+            color: white;
+  }
+.bar{
+    transform: rotate(90deg);
+    margin-left: 10px;
+}
+  .product-card-container
+  {
+    display: flex;
+    height: 400px;
+    margin: 20px auto 20px;
+    background: white;
+    
+}
+.product-card-description{
+
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 400px;
+        padding: 50px;
+        
+
+}
+.product-card-description li{
+     list-style-type:disc;
+
+}
+
+  .product-card1-img{
+        height: 400px;
+        width: 50%;
+        background:url('./../images/p-watch4.jfif');
+        background-position: center;
+        background-size: cover;
+        transform: scale(0.95);
+        
+  }
+  .product-card2-img{
+         width: 50%;
+         height: 400px;
+         transform: scale(0.95);
+        background:url('./../images/p-watch6.jpg') no-repeat;
+        background-position: center;
+        background-size: contain;
+  }
+  .product-card3-img{
+    width: 50%;
+    height: 400px;
+    background:url('./../images/p-watch9.jpg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(0.95);
+  }
+  .product-card4-img{
+    width: 50%;
+    height: 400px;
+    background:url('./../images/p-watch7.jpg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(0.95);
+  }
+  .product-card1-img:hover,.product-card2-img:hover,.product-card3-img:hover,.product-card4-img:hover
+  {
+    transition: 0.2s;
+    transform: scale(1);
+
+
+}
+  @media screen and  (max-width:900px)
+  {
+    .product-card-container
+    {
+        flex-direction: column-reverse;
+        flex: 1;
+        height: 800px;
+
+    }
+    .product-card-description{
+        width: 100%;
+    }
+    .product-card1-img{ width: 100%;}
+    .product-card2-img{width: 100%;}
+    .product-card3-img{width: 100%;}
+    .product-card4-img{width: 100%;}
+        
+    }
+
+
+
+
+
+/* *************************About Page************************ */
+
+.about-hero{
+    height: 500px;
+    background:white url('./../images/about.jpg') no-repeat;
+    background-size: contain;
+    background-position:center;
+           
+}
+
+.heading{
+    text-align: center;
+    padding: 20px;
+}
+
+.about-card-container1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.about-card-container2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+
+}
+
+.about-card1{
+    height: 250px;
+    width:40%;
+    background: #e2e2eb;
+    margin: 20px auto 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.about-card2{
+    height: 250px;
+    width:40%;
+    background: #e2e2eb;
+    margin: 20px auto 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.about-card3{
+    height: 250px;
+    width:40%;
+    background: #e2e2eb;
+    margin: 20px auto 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.about-card4{
+    height: 250px;
+    width:40%;
+    background: #e2e2eb;
+    margin: 20px auto 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.about-img{
+    margin: 10px;
+    width: 40%;
+    height: 70%;
+    border-radius: 50%;
+    background: url('./../images/head.png');
+    background-size: cover;
+    background-position: center;
+}
+.about-description{
+    width: 70%;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0 0 30px;
+    
+}
+.about-description h3{
+    color: red;
+}
+.i-can{
+    display: inline;
+    padding: 5px;
+}
+.icon{
+    
+border-radius: 50%;
+border: none;
+background: #429cd6;
+color: white;
+
+}
+.icon:hover{
+    transition: 0.2s;
+    transform: scale(1.2);
+}
+
+.about-description ul {
+   padding: 0;
+}
+.about-description li{
+    list-style-type:disc;
+
+}
+@media screen and  (max-width:750px)
+{
+    .about-card1,.about-card2,.about-card3,.about-card4{
+        width: 100%;
+    }
+
+
+}
+
+
+
+/* **************************Contact Page*************************/
+
+
+.contact-hero{
+
+    height: 500px;
+    background:white url('./../images/contact.png') no-repeat ;
+    background-size: contain;
+    background-position:center;
+    
+}
+.heading2{
+    text-align: center;
+    padding: 0;
+}
+.form1{
+
+    width: 80%;
+    height: 700px;
+    border: 1px solid rgb(104, 99, 99);
+    margin: 100px auto;
+    padding: 50px;
+}
+label{
+    margin:10px;
+   
+}
+select{
+    height: 2em;
+}
+
+.myflex{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    width: 100%;
+}
+.divfloat{
+    width: 48%;
+    white-space: nowrap;
+    float: left;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+.divclear{
+    width: 48%;
+    white-space: nowrap;
+    clear: both;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+textarea{
+    width: 80%;
+    height: 200px;
+    margin: 10px auto 10px;
+}
+#email{
+    margin:auto 25px auto 25px;
+
+}
+ #phone{
+    margin:auto 20px auto 15px;
+
+ }
+ #product{
+     width: 300px;
+
+ }
+ .submit{
+     border-radius: 10px;
+     width: 120px;
+     background: #6bf;
+     
+ }
+ input:focus,  textarea:focus,select:focus{
+    background   : rgba(0,0,0,.1);
+    border-radius: 5px;
+    outline      : none;
+  
+ }
